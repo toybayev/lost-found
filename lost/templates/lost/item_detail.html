@@ -1,0 +1,9 @@
+{% extends 'lost/base.html' %}
+
+{% block content %}
+<h1>{{ item.title }}</h1>
+<p><strong>Описание:</strong> {{ item.description }}</p>
+<p><strong>Статус:</strong> {{ item.get_status_display }}</p>
+<p><strong>Контакт владельца:</strong> <a href="{{ item.telegram_contact }}" target="_blank">{{ item.telegram_contact }}</a></p>
+<a href="{% url 'index' %}" class="btn btn-secondary mt-3">Назад</a>
+{% endblock %}

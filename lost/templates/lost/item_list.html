@@ -1,0 +1,14 @@
+{% extends 'lost/base.html' %}
+
+{% block content %}
+<h1>Все предметы</h1>
+<a href="{% url 'item-create' %}" class="btn btn-primary mb-3">Добавить предмет</a>
+<div class="list-group">
+    {% for item in items %}
+        <a href="{% url 'item-detail' item.id %}" class="list-group-item list-group-item-action">
+            <h5>{{ item.title }}</h5>
+            <p>{{ item.description }}</p>
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}

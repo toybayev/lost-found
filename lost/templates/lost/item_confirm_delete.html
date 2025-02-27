@@ -1,0 +1,10 @@
+{% extends 'lost/base.html' %}
+
+{% block content %}
+<h2>Удалить "{{ item.title }}"?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Удалить</button>
+</form>
+<a href="{% url 'index' %}" class="btn btn-secondary mt-3">Отмена</a>
+{% endblock %}
