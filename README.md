@@ -7,38 +7,31 @@ A simple Django web application for lost and found items.
 ### 1. Install and Activate Virtual Environment
 First, create and activate a virtual environment:
 
-```bash
+```
 python -m venv env
-On Windows:
 
-bash
-Copy
-Edit
+
 ./env/Scripts/activate
-On Mac/Linux:
+```
 
-bash
-Copy
-Edit
-source env/bin/activate
-2. Install Dependencies
-Ensure you have Django 4.0 installed:
+### 2. Install Dependencies
+Ensure you have Django 5.1.6 installed:
 
-bash
-Copy
-Edit
-pip install django==4.0
-3. Navigate to the Project Directory
-bash
-Copy
-Edit
-cd ask_platform
-4. Apply Migrations and Run the Server
-bash
-Copy
-Edit
+```
+pip install django==5.1.6
+```
+
+### 3. Navigate to the Project Directory
+```
+cd lostfound
+```
+### 4. Apply Migrations and Run the Server
+
+```
 python manage.py migrate
 python manage.py runserver
+```
+
 Now, open your browser and visit http://127.0.0.1:8000/ to access the application.
 
 Features
@@ -59,11 +52,13 @@ lostfound/
 │   │── forms.py       # Django forms
 │   │── urls.py        # URL routing
 │── manage.py          # Django command-line utility
-Admin Access
+
+
+
+### Admin Access
 To access the Django admin panel, create a superuser:
 
-bash
-Copy
-Edit
+```
 python manage.py createsuperuser
-Then login at http://127.0.0.1:8000/admin/.    
+Then login at http://127.0.0.1:8000/admin/.
+```
